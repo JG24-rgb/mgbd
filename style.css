@@ -1,0 +1,1356 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Racing+Sans+One&display=swap");
+/* line 11, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 16, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+html {
+  font-size: 100%; }
+
+/* line 20, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+body {
+  margin: 0;
+  color: #f4f4f8;
+  overflow-x: hidden; }
+
+/* line 57, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #00120b;
+  position: relative;
+  z-index: 10; }
+  @media (min-width: 480px) {
+    /* line 57, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .navbar {
+      height: 8.125rem; } }
+  /* line 76, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .navbar .navbar__logo {
+    width: 100px; }
+  /* line 80, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .navbar .navbar__menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    @media (min-width: 1000px) {
+      /* line 80, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .navbar .navbar__menu {
+        -webkit-box-pack: start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        width: auto;
+        margin-left: 100px; } }
+  /* line 97, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .navbar .navbar__icon {
+    margin-left: 2rem;
+    font-size: 2.5rem;
+    color: #f4f4f8;
+    cursor: pointer; }
+    @media (min-width: 1000px) {
+      /* line 97, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .navbar .navbar__icon {
+        display: none; } }
+  /* line 108, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .navbar .navbar__dropdown {
+    display: none;
+    position: absolute;
+    top: calc(90% + 5px);
+    left: 0;
+    width: 100%;
+    background-color: #00120b;
+    padding: 0;
+    margin: 0;
+    border-radius: none;
+    -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 20; }
+    @media (min-width: 1000px) {
+      /* line 108, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .navbar .navbar__dropdown {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: static;
+        width: auto;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        background-color: transparent;
+        opacity: 1; } }
+    /* line 135, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .navbar .navbar__dropdown a {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-family: 'Krub', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      text-align: center;
+      color: #f4f4f8;
+      text-decoration: none;
+      margin-bottom: 2rem; }
+      @media (min-width: 1000px) {
+        /* line 135, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+        .navbar .navbar__dropdown a {
+          margin-bottom: 0;
+          margin-left: 2rem;
+          color: #f4f4f8; } }
+      /* line 156, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .navbar .navbar__dropdown a:hover {
+        color: #f9a03f;
+        -webkit-transition: color .5s ease-in-out;
+        transition: color .5s ease-in-out; }
+  /* line 164, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .navbar .clicked .navbar__dropdown {
+    display: block; }
+
+/* line 170, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.hero {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  background: url("../images/hero.jpeg") no-repeat center center/cover;
+  color: #f4f4f8;
+  text-align: center;
+  padding: 0 2rem; }
+  /* line 191, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1; }
+  /* line 202, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .hero h1 {
+    position: relative;
+    z-index: 2;
+    font-family: 'Racing Sans One', sans-serif;
+    font-size: 4rem;
+    color: #f4f4f8; }
+    @media (min-width: 768px) {
+      /* line 202, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .hero h1 {
+        font-size: 5rem; } }
+    @media (min-width: 1000px) {
+      /* line 202, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .hero h1 {
+        font-size: 8rem;
+        padding: 0 6rem; } }
+
+/* line 222, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.btn {
+  position: relative;
+  cursor: pointer;
+  z-index: 2;
+  font-family: 'Krub', sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #f4f4f8;
+  background-color: #a41623;
+  padding: 1.5rem 2rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  border-radius: 4px;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+  white-space: nowrap;
+  display: block; }
+  /* line 240, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .btn:hover {
+    background-color: #f9a03f;
+    -webkit-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out; }
+  @media (min-width: 768px) {
+    /* line 222, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .btn {
+      font-size: 1.5rem; } }
+  @media (min-width: 1000px) {
+    /* line 222, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .btn {
+      font-size: 1.75rem; } }
+
+/* line 257, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.all-sections {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center; }
+
+/* line 271, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.headings {
+  font-family: 'Racing Sans One', sans-serif;
+  color: #a41623;
+  font-size: 4rem;
+  text-align: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+  @media (min-width: 768px) {
+    /* line 271, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .headings {
+      font-size: 3rem; } }
+  @media (min-width: 1000px) {
+    /* line 271, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .headings {
+      font-size: 3rem; } }
+  @media (min-width: 1200px) {
+    /* line 271, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .headings {
+      font-size: 3rem; } }
+
+/* line 295, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.product-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
+
+@media (min-width: 768px) {
+  /* line 316, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .product-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column; } }
+
+@media (min-width: 1000px) {
+  /* line 325, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .product-container {
+    display: none; } }
+
+@media (min-width: 1200px) {
+  /* line 331, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .product-container {
+    display: none; } }
+
+/* line 337, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.product-card {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 23rem;
+  max-width: 100%;
+  height: auto;
+  max-height: 100%;
+  background-color: #00120b;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  margin: 3rem 0;
+  position: relative; }
+
+/* line 355, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.product-card.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+
+/* line 361, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.product-title {
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  font-family: 'Racing Sans One', sans-serif;
+  color: #f9a03f;
+  text-align: left;
+  margin-left: 3rem;
+  white-space: nowrap;
+  font-size: 2rem;
+  margin-bottom: 0.5rem; }
+
+/* line 374, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.product-description {
+  font-size: 1.25rem;
+  margin: .5rem;
+  font-family: 'Krub', sans-serif;
+  color: #f4f4f8;
+  text-align: left;
+  margin-left: 3rem;
+  line-height: 1.5;
+  width: 80%; }
+
+/* line 385, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.browse-parts-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  font-family: 'Krub', sans-serif;
+  font-weight: 700;
+  color: #f4f4f8;
+  background-color: #a41623;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  width: 80%; }
+
+/* line 410, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.slider-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+  height: auto;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  @media (min-width: 480px) {
+    /* line 410, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .slider-controls {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-top: 0.5rem; } }
+
+/* line 435, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  margin: 0 1rem;
+  margin-bottom: 1rem;
+  background-color: #f9a03f;
+  border-radius: 50%;
+  color: #00120b; }
+  @media (min-width: 480px) {
+    /* line 435, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .arrow {
+      width: 50px;
+      height: 50px;
+      font-size: 1.8rem;
+      margin: 0.5rem; } }
+
+/* line 462, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.slide-indicator {
+  font-family: 'Krub', sans-serif;
+  font-size: 2rem;
+  font-weight: bold; }
+  @media (min-width: 480px) {
+    /* line 462, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .slide-indicator {
+      font-size: 1.5rem; } }
+
+/* line 477, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.product-desktop-container {
+  display: none;
+  border: 3px solid #a41623;
+  border-radius: 10px;
+  width: 70%;
+  margin-left: 2rem;
+  margin-top: 5rem; }
+  @media (min-width: 1000px) {
+    /* line 477, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .product-desktop-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media (min-width: 1200px) {
+    /* line 477, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .product-desktop-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+/* line 501, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.search-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto; }
+
+/* line 512, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+#search-input {
+  width: 100%;
+  font-size: 1rem; }
+
+/* line 517, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.search-btn {
+  border: none;
+  background-color: #f4f4f8;
+  color: #a41623;
+  padding: 10px 20px;
+  border-radius: 0;
+  cursor: pointer;
+  font-size: 1rem; }
+
+/* line 531, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-container {
+  display: none;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+  justify-content: space-around; }
+  @media (min-width: 1000px) {
+    /* line 531, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .desktop-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media (min-width: 1200px) {
+    /* line 531, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .desktop-container {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex; } }
+
+/* line 551, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 35%;
+  background-color: #00120b;
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  position: relative;
+  margin: 2rem auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  overflow: hidden; }
+
+/* line 574, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-cards img {
+  width: 100%;
+  height: auto;
+  max-height: 380px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0; }
+
+/* line 583, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-cards .content {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 20px; }
+
+/* line 600, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-heading {
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 2rem;
+  color: #f9a03f; }
+
+/* line 606, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-description {
+  font-family: 'Krub', sans-serif;
+  font-size: 1.2rem;
+  color: #f4f4f8;
+  line-height: 1.5;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1; }
+
+/* line 616, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.desktop-btn {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 1rem auto;
+  padding: 1.5rem 4rem;
+  font-size: 1.5rem;
+  font-family: 'Krub', sans-serif;
+  font-weight: 700;
+  color: #f4f4f8;
+  background-color: #a41623;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer; }
+  /* line 634, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .desktop-btn:hover {
+    background-color: #f9a03f;
+    -webkit-transition: background 0.5s ease-in-out;
+    transition: background 0.5s ease-in-out; }
+
+/* line 643, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.headings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 4rem; }
+
+/* line 660, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.headings {
+  font-family: 'Racing Sans One', sans-serif;
+  color: #a41623;
+  font-size: 4rem;
+  margin: 6rem; }
+  @media (min-width: 768px) {
+    /* line 660, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .headings {
+      font-size: 4rem; } }
+  @media (min-width: 1000px) {
+    /* line 660, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .headings {
+      font-size: 5rem; } }
+
+/* line 675, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.testi-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
+  /* line 690, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .testi-container .testi-box {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    background-color: #f9a03f;
+    margin: 0.5rem;
+    border-radius: 20px;
+    padding: 1rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    gap: 1rem; }
+    @media (min-width: 768px) {
+      /* line 690, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .testi-container .testi-box {
+        width: calc(30% - 2rem);
+        height: auto; } }
+    @media (min-width: 1000px) {
+      /* line 690, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .testi-container .testi-box {
+        width: calc(35% - 4rem);
+        height: 100%; } }
+    @media (min-width: 1200px) {
+      /* line 690, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+      .testi-container .testi-box {
+        width: 30rem;
+        height: 30rem;
+        margin: 2rem; } }
+
+/* line 729, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.circle-image {
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  overflow: hidden;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  margin: 0; }
+  @media (min-width: 1200px) {
+    /* line 729, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .circle-image {
+      width: 9.5rem;
+      height: 9.5rem; } }
+
+/* line 746, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.circle-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+/* line 753, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.testi-info {
+  text-align: center; }
+
+/* line 757, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.testi-info h3 {
+  font-family: 'Racing Sans One', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00120b;
+  margin-bottom: 0.5rem;
+  text-align: left; }
+  @media (min-width: 1200px) {
+    /* line 757, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .testi-info h3 {
+      font-size: 2rem; } }
+
+/* line 770, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.stars {
+  margin-bottom: 0.5rem;
+  text-align: left; }
+
+/* line 775, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.stars .fa-star {
+  color: #a41623;
+  font-size: 1.8rem;
+  margin: 0 0.1rem; }
+  @media (min-width: 1200px) {
+    /* line 775, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .stars .fa-star {
+      font-size: 1.5rem; } }
+
+/* line 785, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.testimonial-quote {
+  font-family: 'Krub', sans-serif;
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  color: #00120b;
+  text-align: left; }
+  @media (min-width: 1200px) {
+    /* line 785, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .testimonial-quote {
+      font-size: 1.3rem; } }
+
+/* line 800, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.add-review-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 2rem; }
+
+/* line 812, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.add-review-link {
+  font-family: 'Krub', sans-serif;
+  font-weight: bold;
+  color: #a41623;
+  font-size: 1.5rem;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  margin-bottom: 4rem;
+  text-align: left; }
+  @media (min-width: 1200px) {
+    /* line 812, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .add-review-link {
+      margin-top: 2rem;
+      text-align: left; } }
+  /* line 829, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .add-review-link:hover {
+    color: #f9a03f;
+    -webkit-transition: color 0.5s ease-in-out;
+    transition: color 0.5s ease-in-out; }
+
+/* line 839, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.map-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 100%; }
+  /* line 852, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .map-container iframe {
+    border: 0;
+    width: 100%;
+    height: 45rem; }
+
+@media (min-width: 480px) {
+  /* line 861, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .map-container iframe {
+    height: 35rem; } }
+
+@media (min-width: 768px) {
+  /* line 868, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .map-container iframe {
+    height: 40rem; } }
+
+/* line 876, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.footer {
+  width: 100%;
+  background-color: #00120b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 2rem 1rem;
+  color: #f4f4f8;
+  text-align: center; }
+
+/* line 897, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.footer-content {
+  width: 100%;
+  max-width: 1200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center; }
+
+/* line 913, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.footer-logo img {
+  max-width: 100px;
+  margin-bottom: 1rem; }
+
+/* line 918, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-family: 'Krub', sans-serif;
+  font-weight: bold;
+  font-size: 2rem; }
+  /* line 931, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-links a {
+    color: #f4f4f8;
+    text-decoration: none;
+    font-size: 1rem; }
+    /* line 936, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .footer-links a:hover {
+      text-decoration: underline; }
+
+/* line 942, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.footer-copyright {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-family: 'Krub', sans-serif;
+  font-weight: bold; }
+
+/* line 949, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.footer-address {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-family: 'Krub', sans-serif;
+  font-weight: 400; }
+
+@media (min-width: 768px) {
+  /* line 957, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer {
+    padding: 1.5rem; }
+  /* line 961, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-logo img {
+    max-width: 80px; }
+  /* line 965, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-links a {
+    font-size: 0.9rem; }
+  /* line 969, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-address {
+    font-size: 0.9rem; } }
+
+@media (min-width: 480px) {
+  /* line 975, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer {
+    padding: 1rem; }
+  /* line 979, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-logo img {
+    max-width: 70px; }
+  /* line 983, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    gap: 0.5rem; }
+  /* line 991, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-links a {
+    font-size: 0.8rem; }
+  /* line 995, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .footer-address {
+    font-size: 0.8rem; } }
+
+/* Tutorials Page styles */
+/* line 1010, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.body-copy {
+  font-family: 'Krub', sans-serif;
+  font-size: 1.5rem;
+  color: #00120b;
+  max-width: 100%;
+  height: 100%;
+  line-height: 1.6;
+  text-align: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2rem;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  @media (min-width: 768px) {
+    /* line 1010, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .body-copy {
+      font-size: 1.5rem;
+      padding: 3rem; } }
+  @media (min-width: 1000px) {
+    /* line 1010, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .body-copy {
+      font-size: 1.5rem;
+      padding: 3rem; } }
+  @media (min-width: 1200px) {
+    /* line 1010, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+    .body-copy {
+      font-size: 1.5rem;
+      padding: 5rem; } }
+
+/* line 1048, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.headings {
+  margin-bottom: 0; }
+
+/* line 1053, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.video-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 8rem;
+  width: 100%;
+  padding: 2rem 0; }
+
+/* line 1069, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.video {
+  width: 100%;
+  height: 30rem;
+  max-height: 52rem;
+  aspect-ratio: 16 / 9; }
+
+@media (min-width: 1000px) {
+  /* line 1078, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .video {
+    height: 52rem; } }
+
+@media (min-width: 1200px) {
+  /* line 1084, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .video {
+    height: 52rem; } }
+
+/* line 1091, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.resource-links {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+  text-align: left; }
+
+/* line 1098, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.resource-links li {
+  margin-bottom: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 1.5rem; }
+
+/* line 1109, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.resource-links li::before {
+  content: '';
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 50%;
+  background-color: #f9a03f;
+  margin-right: 1rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
+
+/* line 1123, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.resource-links a {
+  font-family: 'Krub', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00120b;
+  text-decoration: none;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease; }
+
+/* line 1133, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.resource-links a:hover {
+  color: #f9a03f;
+  text-decoration: underline; }
+
+@media (min-width: 1000px) {
+  /* line 1141, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .resource-links a {
+    font-size: 2rem; } }
+
+@media (min-width: 1200px) {
+  /* line 1147, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .resource-links a {
+    font-size: 2rem;
+    text-align: left; } }
+
+/* About Us Page styles */
+/* line 1164, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.about-img-container {
+  width: 92%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-top: 5rem; }
+
+/* line 1175, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.about-img-container img {
+  width: 100%;
+  height: auto; }
+
+/* line 1181, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.sketchfab-embed-wrapper {
+  width: 92%;
+  height: 0;
+  padding-top: 56.25%;
+  position: relative;
+  margin-top: 5rem; }
+
+/* line 1189, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.sketchfab-embed-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/* line 1199, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-family: 'Krub', sans-serif;
+  font-size: 2rem;
+  text-align: left;
+  max-width: 80%;
+  color: #00120b;
+  margin-top: 2rem; }
+
+@media (min-width: 480px) {
+  /* line 1223, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .contact-info {
+    font-size: 1rem; } }
+
+@media (min-width: 1000px) {
+  /* line 1231, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .contact-info {
+    font-size: 1.5rem; } }
+
+@media (min-width: 1200px) {
+  /* line 1237, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .contact-info {
+    font-size: 2.3rem; } }
+
+/* line 1245, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.contact-info p {
+  margin-top: 1rem; }
+
+@media (min-width: 1000px) {
+  /* line 1251, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .contact-info p {
+    margin-right: 2rem; } }
+
+@media (min-width: 1200px) {
+  /* line 1257, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .contact-info p {
+    margin-right: 0; } }
+
+/* Repairs Page styles */
+/* line 1268, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.repair-step {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -ms-flex-line-pack: start;
+  align-content: flex-start;
+  margin-top: 2rem;
+  margin-left: 1rem; }
+
+/* line 1282, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.circle {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #f9a03f;
+  color: #f4f4f8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: bold;
+  margin-right: 1.5rem;
+  -ms-flex-negative: 0;
+  flex-shrink: 0; }
+
+/* line 1308, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 100%;
+  text-align: left; }
+
+/* line 1322, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.step-heading {
+  font-family: 'Krub', sans-serif;
+  font-size: 1.5rem;
+  color: #a41623;
+  margin: 0; }
+
+/* line 1330, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.step-description {
+  font-family: 'Krub', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #00120b;
+  margin-top: 0.5rem;
+  height: 50%; }
+
+@media (min-width: 768px) {
+  /* line 1343, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem; } }
+
+@media (min-width: 1000px) {
+  /* line 1356, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem; }
+  /* line 1362, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .step-heading {
+    font-size: 2rem; }
+  /* line 1366, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .step-description {
+    font-size: 1.5rem; } }
+
+@media (min-width: 1200px) {
+  /* line 1373, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .circle {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2rem; }
+  /* line 1380, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .step-heading {
+    font-size: 2rem; }
+  /* line 1384, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .step-description {
+    font-size: 1.5rem; }
+  /* line 1388, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .repair-step {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 77%; } }
+
+/* line 1400, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 85%;
+  height: auto;
+  background-color: #f9a03f;
+  border-radius: 20px;
+  padding: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+  border: 2px solid #a41623; }
+
+/* line 1417, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.appointment-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 100%; }
+
+/* line 1434, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.form-title {
+  font-family: 'Krub', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.25rem;
+  color: #00120b; }
+
+/* line 1441, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.form-group {
+  margin-bottom: 1.25rem;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column; }
+
+/* line 1453, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+label {
+  font-family: 'Krub', sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: left; }
+
+/* line 1461, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  border: 1px solid #00120b;
+  font-size: 1rem; }
+
+/* line 1471, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.send-button {
+  background-color: #a41623;
+  color: #f4f4f8;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease; }
+
+/* line 1483, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+.send-button:hover {
+  background-color: #771019; }
+
+@media (min-width: 480px) {
+  /* line 1491, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-container {
+    width: 60%;
+    margin-top: 2rem; }
+  /* line 1496, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-title {
+    width: 100%; } }
+
+@media (min-width: 768px) {
+  /* line 1505, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-container {
+    width: 70%;
+    height: 100%;
+    margin-top: 2rem; }
+  /* line 1511, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-title {
+    font-size: 2.5rem;
+    width: 50%; } }
+
+@media (min-width: 1000px) {
+  /* line 1520, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-container {
+    width: 60%;
+    height: 100%;
+    margin-top: 2rem; }
+  /* line 1526, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-title {
+    font-size: 2.5rem;
+    width: 50%; } }
+
+@media (min-width: 1200px) {
+  /* line 1535, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-container {
+    width: 40%;
+    height: 100%;
+    margin-top: 2rem; }
+  /* line 1541, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .form-title {
+    font-size: 2.5rem;
+    width: 100%;
+    height: auto; }
+  /* line 1547, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    font-size: 1.5rem;
+    padding: 1rem; }
+  /* line 1554, /Users/joshg./Desktop/GrossJ_P1/css/style.scss */
+  .send-button {
+    background-color: #a41623;
+    color: #f4f4f8;
+    padding: 0.625rem 1.25rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.5rem;
+    margin: 2rem;
+    cursor: pointer;
+    -webkit-transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; } }
+
+/*# sourceMappingURL=style.css.map */
